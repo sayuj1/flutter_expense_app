@@ -34,6 +34,8 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      isScrollControlled:
+          true, // bottom sheet takes full height of the screen and can be scrolled
       context: context, // flutter provides this (widget meta info)
       builder: (ctx) => NewExpense(onAddExpense: _addExpense),
     );
